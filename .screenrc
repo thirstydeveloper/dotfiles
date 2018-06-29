@@ -1,0 +1,4 @@
+# Normally ^A x locks the screen requiring your password to unlock
+# This is problematic if the user account doesn't have a password
+# Disable it.
+bind x

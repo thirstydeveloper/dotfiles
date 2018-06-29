@@ -1,0 +1,10 @@
+[user]
+	name = thirstydeveloper
+	email = thirstydeveloper@gmail.com
+
+[push]
+  default = simple
+
+[core]
+  editor = /usr/bin/vim
+
