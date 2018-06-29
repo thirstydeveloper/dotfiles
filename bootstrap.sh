@@ -11,7 +11,7 @@ function install() {
 }
 
 setupHomeDirectory() {
-  mkdir -p ${HOME}/{bin,code,etc,tmp}
+  mkdir -p ${HOME}/{bin,code,etc,notes,tmp}
 
   if [ ! -f ${HOME}/etc/host.bashrc ]; then
     echo "# Host-specific bashrc settings here" >> ${HOME}/etc/host.bashrc
