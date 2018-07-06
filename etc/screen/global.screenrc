@@ -7,6 +7,12 @@ register ] "\033:se nopaste\015a"
 # Disable it.
 bind x
 
+# Use vi bindings for switching between screen regions
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left
+
 # mouse tracking allows to switch region focus by clicking
 # disabled because I can't select regions to copy and paste
 # with mouse when this is enabled
