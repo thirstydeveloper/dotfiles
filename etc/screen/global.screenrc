@@ -15,6 +15,9 @@ bind h focus left
 bind H focus top
 bind L focus bottom
 
+bind = resize =
+bind _ resize max
+
 # mouse tracking allows to switch region focus by clicking
 # disabled because I can't select regions to copy and paste
 # with mouse when this is enabled
