@@ -12,9 +12,10 @@ function install() {
 
 setupHomeDirectory() {
   mkdir -p ${HOME}/{bin,code,etc,notes,tmp}
+  mkdir -p ${HOME}/etc/bashrc.d
 
-  if [ ! -f ${HOME}/etc/host.bashrc ]; then
-    echo "# Host-specific bashrc settings here" >> ${HOME}/etc/host.bashrc
+  if [ ! -f ${HOME}/etc/bashrc.d/999-host.bashrc ]; then
+    echo "# Host-specific bashrc settings here" >> ${HOME}/etc/bashrc.d/999-host.bashrc
   fi
 
   if [ ! -f ${HOME}/.ssh/id_rsa ]; then

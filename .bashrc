@@ -1,27 +1,14 @@
-# .bashrc
+# DO NOT MODIFY
+#
+# Instead make customizations to ~/etc/bashrc.d/900-user.bashrc or
+# ~/etc/.bashrc.d/999-host.bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-if [ -f ${HOME}/etc/host.bashrc ]; then
-  . ${HOME}/etc/host.bashrc
-fi
+for bashrc in $(find ${HOME}/etc/bashrc.d/ -name "*.bashrc" -type f); do
+  source ${bashrc};
+done
 
-set -o vi
-
-pathmunge() {
-  if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)"; then
-    if [ "$2" = "after" ]; then
-      PATH=$PATH:$1
-    else
-      PATH=$1:$PATH
-    fi
-  fi
-}
-
-pathmunge ${HOME}/.local/bin
-pathmunge ${HOME}/bin
-
-export PATH
