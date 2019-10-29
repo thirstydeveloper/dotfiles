@@ -43,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+* .gitconfig core.editor vim location
 * Fix fzf in .bashrc
 
 ## [1.0.0] - 2019-03-12

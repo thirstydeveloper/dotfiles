@@ -12,7 +12,7 @@
   followTags = true
 
 [core]
-  editor = /bin/vim
+  editor = /usr/local/bin/vim
   excludesfile = ~/.gitignore
   # Speed up commands involving untracked files such as `git status`.
   # https://git-scm.com/docs/git-update-index#_untracked_cache
