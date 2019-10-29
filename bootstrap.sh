@@ -31,7 +31,14 @@ function installDotFiles() {
         --exclude ".gitmodules" \
         --exclude "bootstrap.sh" \
         --exclude "README.md" \
+        --exclude "CHANGELOG.md" \
+        --exclude "etc" \
+        --exclude ".vim" \
         -avh --no-perms . ~;
+
+  # These are copied separately to maintain them as symlinks
+  rsync -avh --no-perms etc/* ~/etc/
+  rsync -avh --no-perms .vim/* ~/.vim/
 
   source ~/.bash_profile;
 }
