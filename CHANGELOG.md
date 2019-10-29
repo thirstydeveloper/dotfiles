@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* EDITOR and LANG to 900-user.bashrc
+* reload alias to 900-user.bashrc
+
 ### Changed
 * Many changes to .gitconfig
 * Bootstrap preserves symlinks for etc and .vim

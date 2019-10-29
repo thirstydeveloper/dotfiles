@@ -12,6 +12,9 @@ pathmunge ${HOME}/.local/bin
 pathmunge ${HOME}/bin
 
 export PATH
+export EDITOR=vim
+export LANG=en_US.UTF-8
 
 set -o vi
 
+alias reload='source ${HOME}/.bashrc'
