@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * reload alias to 900-user.bashrc
 * .tmux.conf
 * multiple vim plugins
+* add bash colors to bashrc.d
 
 ### Changed
 * Many changes to .gitconfig
