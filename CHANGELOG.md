@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Many changes to .gitconfig
 * Bootstrap preserves symlinks for etc and .vim
 * bootstrap excludes CHANGELOG
+* PS1 to include:
+    * kube-context
+    * aws profile
+    * icon for whether git workspace is clean or not
+    * icon for whether last command was successful
+    * move command entry to new line
 
 ### Fixed
 
