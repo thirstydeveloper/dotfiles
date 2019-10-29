@@ -34,6 +34,7 @@ function installDotFiles() {
         --exclude "CHANGELOG.md" \
         --exclude "etc" \
         --exclude ".vim" \
+        --exclude ".pre-commit-config.yaml" \
         -avh --no-perms . ~;
 
   # These are copied separately to maintain them as symlinks
@@ -58,4 +59,3 @@ else
 fi;
 
 unset install;
-

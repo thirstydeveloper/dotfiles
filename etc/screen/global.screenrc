@@ -21,7 +21,7 @@ bind _ resize max
 # mouse tracking allows to switch region focus by clicking
 # disabled because I can't select regions to copy and paste
 # with mouse when this is enabled
-# 
+#
 # https://gist.github.com/joaopizani/2718397
 #
 #mousetrack on
@@ -49,4 +49,3 @@ bind _ resize max
 #bind -c rsz -k kr eval "focus right" "command -c rsz" # Right
 #bind -c rsz -k ku eval "focus up"    "command -c rsz" # Up
 #bind -c rsz -k kd eval "focus down" "command -c rsz" # Down
-

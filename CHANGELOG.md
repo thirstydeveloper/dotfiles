@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * multiple vim plugins
 * add bash colors to bashrc.d
 * git aliases
+* pre-commit hooks
 
 ### Changed
 * Many changes to .gitconfig
