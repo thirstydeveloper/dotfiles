@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+* Many changes to .gitconfig
+
 ### Fixed
 
 * Fix fzf in .bashrc
