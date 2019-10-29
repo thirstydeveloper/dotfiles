@@ -9,8 +9,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'ntpeters/vim-better-whitespace.git'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'itchyny/lightline.vim'
+Plugin 'airblade/vim-rooter'
+Plugin 'dense-analysis/ale'
+Plugin 'junegunn/fzf.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -116,3 +123,37 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "" Shortcut for toggling NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
+"" FZF config
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+noremap <C-o> :Files<CR>
+
+"" git gutter
+
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_highlight_lines = 0
+
+let g:lightline = {
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
+
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
