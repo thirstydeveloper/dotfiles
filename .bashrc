@@ -12,3 +12,4 @@ for bashrc in $(find ${HOME}/etc/bashrc.d/ -name "*.bashrc" -type f); do
   source ${bashrc};
 done
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
