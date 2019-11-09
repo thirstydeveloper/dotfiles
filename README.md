@@ -3,3 +3,4 @@
 ## Packages
 
 * bash-completion
+* vim
