@@ -7,8 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### [1.2.0] - 2019-11-17
+
 * Fix repo name in PS1 to support https
 * Add alias for generating gitignore from gitignore.io
+
+### [1.1.0] - 2019-10-29
 
 ### Added
 
