@@ -88,3 +88,7 @@ case $OSTYPE in
     alias gtls='git tag -l | sort -V'
     ;;
 esac
+
+# Use gitignore.io to generate .gitignore files
+git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
+alias gi="git ignore"
