@@ -20,7 +20,7 @@ get_PS1() {
   is_in_git_repo=$(git rev-parse --is-inside-work-tree 2>&1)
 
   if [[ "${is_in_git_repo}" == "true" ]]; then
-    repo=$(git config --get remote.origin.url | sed -r 's/[^\/]+\/(.*)\.git/\1/g')
+    repo=$(git config --get remote.origin.url | sed -r 's/.*\/([^\.\/]+)(\.git)?/\1/g')
     repo_root=$(git rev-parse --show-toplevel)
     branch=$(git branch | sed -n '/\* /s///p')
 
