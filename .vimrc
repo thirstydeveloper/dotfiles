@@ -18,6 +18,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -157,3 +158,7 @@ set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+"" vim-go
+
+let g:go_fmt_command = "goimports"
