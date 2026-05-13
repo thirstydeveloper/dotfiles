@@ -8,8 +8,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-for bashrc in $(find ${HOME}/etc/bashrc.d/ -name "*.bashrc" -type f); do
-  source ${bashrc};
+for shellrc in $(find ${HOME}/etc/shellrc.d/ -name "*.sh" -type f | sort); do
+  source ${shellrc}
 done
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

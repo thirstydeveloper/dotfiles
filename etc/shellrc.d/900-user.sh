@@ -17,4 +17,8 @@ export LANG=en_US.UTF-8
 
 set -o vi
 
-alias reload='source ${HOME}/.bashrc'
+if [ -n "$ZSH_VERSION" ]; then
+  alias reload='source ${HOME}/.zshrc'
+else
+  alias reload='source ${HOME}/.bashrc'
+fi

@@ -12,10 +12,10 @@ function install() {
 
 setupHomeDirectory() {
   mkdir -p ${HOME}/{bin,code,etc,notes,tmp}
-  mkdir -p ${HOME}/etc/bashrc.d
+  mkdir -p ${HOME}/etc/shellrc.d
 
-  if [ ! -f ${HOME}/etc/bashrc.d/999-host.bashrc ]; then
-    echo "# Host-specific bashrc settings here" >> ${HOME}/etc/bashrc.d/999-host.bashrc
+  if [ ! -f ${HOME}/etc/shellrc.d/999-host.sh ]; then
+    echo "# Host-specific shell settings here" >> ${HOME}/etc/shellrc.d/999-host.sh
   fi
 
   if [ ! -f ${HOME}/.ssh/id_rsa ]; then
@@ -41,7 +41,7 @@ function installDotFiles() {
   rsync -avh --no-perms etc/* ~/etc/
   rsync -avh --no-perms .vim/* ~/.vim/
 
-  source ~/.bash_profile;
+  echo "Dotfiles installed. Open a new terminal (or run 'source ~/.zprofile') to apply changes."
 }
 
 function updateVim() {
