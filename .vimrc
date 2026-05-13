@@ -19,6 +19,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
+Plugin 'rishi-opensource/vim-claude-code'
 
 call vundle#end()
 filetype plugin indent on
