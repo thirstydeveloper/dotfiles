@@ -7,8 +7,7 @@ fi
 get_PS1() {
   prev_command_status="$?"
 
-  if command -v kubectl 2>&1 >/dev/null; then
-    kube_context=$(kubectl config current-context)
+  if command -v kubectl 2>&1 >/dev/null && kube_context=$(kubectl config current-context 2>/dev/null); then
     if command -v kubens 2>&1 >/dev/null; then
       kube_ns=$(kubens -c)
       kube_context="${kube_context}@${kube_ns}"
@@ -16,6 +15,7 @@ get_PS1() {
 
     PS1="${_p}${C_CYAN_FG}${_q}⎈:${kube_context}${_p}${C_NORMAL_FG}${_q}"
   else
+    kube_context=""
     PS1=""
   fi
 
