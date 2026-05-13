@@ -83,6 +83,7 @@ alias gstl="git stash list"
 #alias gh='cd "$(git rev-parse --show-toplevel)"'
 alias cdgr='cd "$(git rev-parse --show-toplevel)"'
 alias pdgr='pushd "$(git rev-parse --show-toplevel)"'
+alias cdgit='cd ${HOME}/code'
 
 case $OSTYPE in
   darwin*)
