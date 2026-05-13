@@ -12,14 +12,13 @@ get_PS1() {
       kube_ns=$(kubens -c)
       kube_context="${kube_context}@${kube_ns}"
     fi
-
-    PS1="${_p}${C_CYAN_FG}${_q}⎈:${kube_context}${_p}${C_NORMAL_FG}${_q}"
   else
-    kube_context=""
-    PS1=""
+    kube_context="<not set>"
   fi
 
-  current_aws_profile=$(aws configure list | sed 's/^ \+//' | awk -F" {2,}" '$1 == "profile" {print $2}')
+  PS1="${_p}${C_CYAN_FG}${_q}⎈:${kube_context}${_p}${C_NORMAL_FG}${_q}"
+
+  current_aws_profile="${AWS_PROFILE:-<not set>}"
 
   PS1="${PS1} ${_p}${C_LIGHT_BLUE_FG}${_q}🌩 :${current_aws_profile}${_p}${C_NORMAL_FG}${_q}"
 
