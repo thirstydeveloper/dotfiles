@@ -3,7 +3,6 @@
 alias gbp="git branch --merged | grep -v "master" | xargs git branch -d"
 
 # https://github.com/Bash-it/bash-it/blob/master/aliases/available/git.aliases.bash
-
 alias gcl='git clone'
 alias ga='git add'
 alias grm='git rm'
