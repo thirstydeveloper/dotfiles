@@ -81,6 +81,8 @@ alias gstd="git stash drop"
 alias gstl="git stash list"
 # DISABLE: don't conflict with gh cli tool
 #alias gh='cd "$(git rev-parse --show-toplevel)"'
+alias cdgr='cd "$(git rev-parse --show-toplevel)"'
+alias pdgr='pushd "$(git rev-parse --show-toplevel)"'
 
 case $OSTYPE in
   darwin*)
