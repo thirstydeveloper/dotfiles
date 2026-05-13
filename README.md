@@ -2,5 +2,4 @@
 
 ## Packages
 
-* bash-completion
 * vim
