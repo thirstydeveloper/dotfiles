@@ -1,3 +1,9 @@
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 pathmunge() {
   if ! echo $PATH | egrep -q "(^|:)$1($|:)"; then
     if [ "$2" = "after" ]; then
