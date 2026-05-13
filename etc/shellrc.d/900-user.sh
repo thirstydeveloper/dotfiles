@@ -22,3 +22,5 @@ if [ -n "$ZSH_VERSION" ]; then
 else
   alias reload='source ${HOME}/.bashrc'
 fi
+
+alias cddot='cd ${HOME}/dotfiles'
