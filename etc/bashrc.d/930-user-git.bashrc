@@ -33,6 +33,7 @@ alias gp='git push'
 alias gpo='git push origin'
 alias gpu='git push --set-upstream'
 alias gpuo='git push --set-upstream origin'
+alias gpuob='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gpom='git push origin master'
 alias gr='git remote'
 alias grv='git remote -v'
@@ -78,7 +79,8 @@ alias ggui="git gui"
 alias gcsam="git commit -S -am"
 alias gstd="git stash drop"
 alias gstl="git stash list"
-alias gh='cd "$(git rev-parse --show-toplevel)"'
+# DISABLE: don't conflict with gh cli tool
+#alias gh='cd "$(git rev-parse --show-toplevel)"'
 
 case $OSTYPE in
   darwin*)
